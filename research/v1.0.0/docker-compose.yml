@@ -1,0 +1,21 @@
+version: "3.9"
+
+services:
+  research:
+    image: my-cuda-lab:13.0     # ビルド済みのイメージ名
+    container_name: my-research # コンテナ名
+    working_dir: /workspace
+    volumes:
+      - .:/workspace # ホスト作業ディレクトリ
+      - /mnt/c/Users/mitsu:/win_home:ro # Windowsユーザフォルダ (参照用)
+      - /usr/local/texlive/2025:/usr/local/texlive/2025:ro # TeX Live本体
+      - /usr/local/texlive/texmf-local:/usr/local/texlive/texmf-local:ro # TeXローカルパッケージ
+      - /usr/local/texlive/texmf-var:/usr/local/texlive/texmf-var:rw # TeXキャッシュ/フォーマット
+    user: "${UID}:${GID}"
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - capabilities: [gpu]
+    stdin_open: true   # -it の代わり
+    tty: true          # -it の代わり

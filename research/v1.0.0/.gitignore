@@ -1,0 +1,22 @@
+# --- Env files ---
+.env
+.env.*
+
+# --- Python cache ---
+__pycache__/
+*.pyc
+
+# --- VSCode ---
+.vscode/
+
+# --- Docker ---
+# Docker builds & temp
+*/.cache/
+*/.temp/
+
+# --- Logs ---
+*.log
+
+# --- OS files ---
+.DS_Store
+Thumbs.db
