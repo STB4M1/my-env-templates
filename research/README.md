@@ -20,7 +20,6 @@
 - **再現可能な計算環境（Reproducibility）**  
 - **GPU/CPU の切り替え可能性**  
 - **CI/CD や実験管理の拡張性**  
-- **学生・共同研究者との配布しやすさ**
 
 を達成するためのテンプレート集です。
 
@@ -37,16 +36,6 @@ research/
     ├── docker-compose.yml
     └── ...
 ```
-
----
-
-## 🧩 Versioning Policy
-
-バージョンは **Semantic Versioning (MAJOR.MINOR.PATCH)** を採用しています。
-
-- **MAJOR**: 互換性を壊す大規模変更  
-- **MINOR**: 新機能追加、構成の拡張  
-- **PATCH**: 軽微な修正・依存更新（フォルダは新規作成しない）
 
 ---
 
